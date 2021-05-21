@@ -10,7 +10,7 @@ public class TestService {
 
     Map<Integer,Employee> employees = new HashMap<>();
 
-    public Map<Integer, Employee> getEmployeeData(){
+    public Map<Integer, Employee> getEmployeeData() throws Exception{
         employees.put(1001,new Employee(1001,"Sandeep"));
         employees.put(1002,new Employee(1002,"Test"));
         return employees;

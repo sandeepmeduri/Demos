@@ -16,8 +16,9 @@ public class TestController {
     TestService service;
 
     @GetMapping("/employee")
-    public List<Employee> getEmpData(){
-        return service.getEmployeeData().values().stream().collect(Collectors.toList());
+    public Employee getEmpData() throws Exception {
+        List<Employee> emp = service.getEmployeeData().values().stream().collect(Collectors.toList());
+        return emp.get(0);
     }
 
     @PostMapping("/employee")
